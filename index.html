@@ -85,16 +85,8 @@ body {
             <animate attributeName="cy" dur="500ms" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;1" values="62;56;59;65;67;73;76;81;74;70;62"/>
         </ellipse>
     </svg>
-    <input type="range" min="200" max="2000" value="500" step="1" id="animationDuration" onchange="updateDuration(this.value)" oninput="updateDuration(this.value)">
 </div>
 
 <script>
 const elements = document.querySelectorAll('animate');
-
-function updateDuration(val) {
-  var newVal = Math.abs(val) + 'ms';
-  Array.prototype.forEach.call(elements, function(el, i){
-    el.setAttribute('dur',newVal);
-  });
-}
 </script>
